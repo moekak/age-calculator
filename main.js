@@ -18,7 +18,7 @@ function calculating(){
          var monthValue = month.value
          var yearValue = year.value
 
-         console.log(monthValue);
+    
     // form.addEventListener("submit", (e) =>{
     
     
@@ -30,10 +30,44 @@ function calculating(){
 
      
     
-        const date = new Date();
-        const getYear = date.getFullYear()
-        const getMonth = date.getMonth() + 1
-        const getDate = date.getDate()
+        let date = new Date();
+        date = date.getTime()
+
+        console.log(date);
+        let bdDate =  new Date(yearValue, monthValue , dayValue)
+        bdDate = bdDate.getTime()
+        const diffs = date - bdDate
+        const diffTime = diffs / 1000/60/60/24/365.24
+        console.log(diffTime);
+
+
+        const diff = date - bdDate;
+
+        // 分に変換
+        const diffMin = diffTime / 60000 
+        // 時間に変更
+        const diffHour = diffTime / 60000 / 60
+        // 日付に変更
+        const diffDay = diffTime / 60000 / 60/ 24
+        // 月に変換
+        const diffMonth = diffTime / 60000 / 60/ 24 / 30.4167 
+        console.log(diffMonth);
+        // 年に変換
+        const diffYear = (diffMonth / 12)
+        const bb = Math.floor(diffYear)
+        const moeka = (diffYear - Math.floor(diffYear)) * 12
+        const dean = Math.floor(moeka)
+        const aaa = Math.floor((moeka - dean) * 30.44)
+        console.log(bb);
+        console.log(dean);
+        console.log(aaa);
+        // const bdDay = bdDate.getDate()
+        // const bdMonth = bdDate.getMonth()
+        // const bdYear = bdDate.getYear()
+        // console.log(bdDate);
+        // console.log(bdDay);
+        // console.log(bdMonth);
+        // console.log(bdYear);
          
         // ==================================　validation ==============================
      
@@ -80,7 +114,7 @@ function calculating(){
             var differenceYear = getYear - yearValue;
             var differenceDate = getDate;
             var differenceMonth;
-            if(monthValue >= getMonth){
+            if(monthValue > getMonth){
                 differenceMonth=  getMonth + (12 - monthValue)
             } else{
                 differenceMonth = getMonth - monthValue
