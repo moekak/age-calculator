@@ -10,27 +10,38 @@
   <body>
     <main>
       <div class="input-wrapper">
-        <form id="input-bd">
+        <div class="form">
           <div class="input-container">
-            <label for=""><p>DAY</p></label>
+            <label for=""><p class="label">DAY</p></label>
             <input type="text" placeholder="DD" id="dayInput" />
+            <div class="error-container">
+              <p class="error"></p>
+            </div>
           </div>
           <div class="input-container">
-            <label for=""><p>MONTH</p></label>
+            <label for=""><p class="label">MONTH</p></label>
             <input type="text" placeholder="MM" id="monthInput" />
+            <div class="error-container">
+              <p class="error"></p>
+            </div>
+            
+
           </div>
           <div class="input-container">
-            <label for=""><p>YEAR</p></label>
+            <label for=""><p class="label">YEAR</p></label>
             <input type="text" placeholder="YYYY" id="yearInput" />
+            <div class="error-container">
+              <p class="error"></p>
+            </div> 
           </div>
-          <input type="submit" />
-        </form>
+          <input type="submit" onclick="handleSubmit()" />
+        </div>
         <div class="border"></div>
         <div class="container">
           <div class="sub-container">
-            <span> <span class="border">-- </span> years</span> <br />
-            <span><span class="border">-- </span> months</span> <br />
-            <span><span class="border">-- </span> days</span> <br />
+            <span><span class="border" id="borderYear">-- </span> years</span> <br />
+            <span><span class="border" id="borderMonth">-- </span> months</span> <br />
+            <span><span class="border" id="borderDay">-- </span> days</span> <br />
           </div>
         </div>
       </div>

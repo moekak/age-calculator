@@ -26,7 +26,7 @@ p{
     width: 12%;
     justify-content: center;
 }
-form{
+.form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,4 +63,21 @@ span{
 .sub-container{
     align-items: flex-start;
     justify-content: flex-start;
+}
+.error{
+    font-size: 0.8rem;
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    /* opacity: 0; */
+    
+}
+.error-invalid{
+    font-size: 0.8rem;
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    /* opacity: 0; */
+}
+.error-container{
+    width: 100%;
+    height: 40px;
 }
