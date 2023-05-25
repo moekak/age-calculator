@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/49c418fc8e.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <main>
+    <main class="contents">
       <div class="input-wrapper">
         <div class="form">
           <div class="input-container">
             <label for=""><p class="label">DAY</p></label>
-            <input type="text" placeholder="DD" id="dayInput" />
+            <input type="text" placeholder="DD" id="dayInput" class="input-field" />
             <div class="error-container">
               <p class="error"></p>
             </div>
           </div>
           <div class="input-container">
             <label for=""><p class="label">MONTH</p></label>
-            <input type="text" placeholder="MM" id="monthInput" />
+            <input type="text" placeholder="MM" id="monthInput" class="input-field" />
             <div class="error-container">
               <p class="error"></p>
             </div>
@@ -29,14 +30,17 @@
           </div>
           <div class="input-container">
             <label for=""><p class="label">YEAR</p></label>
-            <input type="text" placeholder="YYYY" id="yearInput" />
+            <input type="text" placeholder="YYYY" id="yearInput"  class="input-field"/>
             <div class="error-container">
               <p class="error"></p>
             </div> 
           </div>
-          <input type="submit" onclick="handleSubmit()" />
         </div>
-        <div class="border"></div>
+        <div class="btn-container">
+          <div class="border_gray"></div>
+          <i class="fas fa-arrow-down" onclick="handleSubmit()"></i>
+        </div>
+        
         <div class="container">
           <div class="sub-container">
             <span><span class="border" id="borderYear">-- </span> years</span> <br />

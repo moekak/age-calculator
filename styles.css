@@ -3,15 +3,15 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: aliceblue;
+    height: 100vh;
+
 }
-main{
-    width: max-content;
-}
+
 h1{
     font-family: 'Poppins', sans-serif;
 }
@@ -23,35 +23,44 @@ p{
 .input-container{
     display: flex;
     flex-direction: column;
-    width: 12%;
+    width: 18%;
     justify-content: center;
 }
 .form{
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 8%;
+    
+}
+.border_gray{
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+    padding-top: 3%;
+    width: 70%;
 }
 label{
-    color: rgba(0, 0, 0, 0.411);
+    color: hsl(0, 1%, 44%);
+    font-size: 1rem;
 }
-input{
-    padding: 5%;
-    border: 1px solid rgba(0, 0, 0, 0.411);
+.input-field{
+    padding: 7%;
+    border: 1px solid hsl(0, 0%, 86%);
     border-radius: 10px;
     font-size: 2rem;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.411);
+    color: hsl(0, 0%, 8%);
+}
+.input-field:focus{
+    outline: 1px solid hsl(259, 100%, 65%);
+    border-radius: 10px;
+
 }
 .container{
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+   
     margin-top: 3%;
 }
 span{
-    font-size: 4rem;
+    font-size: 4.4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-style: italic;
@@ -80,4 +89,78 @@ span{
 .error-container{
     width: 100%;
     height: 40px;
+}
+
+.fas{
+    color: white;
+    background-color:hsl(259, 100%, 65%) ;
+    border-radius: 50%;
+    padding: 3% 3.5%;
+    font-size: 2.5rem;
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.fas:active{
+    background-color: black;
+}
+.contents{
+    width: 900px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 5%;
+    border-radius: 32px;
+    border-bottom-right-radius: 200px;
+}
+.input-wrapper{
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px){
+    .contents{
+        width: 90%;
+    }
+   
+}
+@media screen and (max-width: 700px){
+
+    span{
+        font-size: 9vw;
+    
+    }
+    .input-field{
+        font-size: 4vw;
+    }
+    .error{
+        font-size: 2vw;
+    }
+    .error-invalid{
+        font-size: 2vw;
+    }
+    .fas{
+        font-size: 3.8vw;
+    }
+    label{
+        font-size: 2.3vw;
+    }
+   
+}
+@media screen and (max-width: 500px){
+
+    .contents{
+      
+        border-radius: 32px;
+        border-bottom-right-radius: 170px;
+    }
+    .input-container{
+        width: 25%;
+    }
+    .border_gray{
+        width: 100%;
+    }
+   
 }
